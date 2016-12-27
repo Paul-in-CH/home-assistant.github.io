@@ -13,7 +13,7 @@ ha_release: pre 0.7
 ---
 
 
-The `modbus` sensor allows you to gather data from [Modbus](http://www.modbus.org/) registers.
+The `modbus` sensor allows you to gather data from [Modbus](http://www.modbus.org/) holding registers (FC=03).
 
 To use your Modbus sensors in your installation, add the following to your `configuration.yaml` file:
 
@@ -42,7 +42,7 @@ sensor:
 
 Configuration variables:
 
-- **registers** array (*Required*): The array contains a list of relevant registers to read from.
+- **registers** array (*Required*): The array contains a list of relevant holding registers to read.
   - **name** (*Required*): Name of the sensor.
   - **slave** (*Required*): The number of the slave (Optional for tcp and upd Modbus).
   - **register** (*Required*): Register number.
